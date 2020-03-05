@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title> Async Weather App </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!--Whole Container-->
+    <div class = "text-center container-fluid">
+        <!--Whole Container-->
+        <div class="row">
+            <!-- use offset -->
+            <div class="col-4">
+            </div>
+
+            <!--header, zip code input, and button (include error alert)-->
+            <div class="col-4 p-3 mb-2 bg-info text-white" text:center>
+                <h1 text:center><b>Weather App</b></h1>
+                
+                
+                <form class="form-horizontal">
+
+                    <div class="form-group mx-sm-3 mb-2">
+                        <div class="form-group mb-2">
+                            <label for="text" class="sr-only">Zip Code</label>
+                            <input type="text" class="form-control" id="input1" placeholder="Zip Code">
+                        </div>
+                        <button class="btn btn-primary mb-2" id="zipbtn">Enter Zip Code</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+
+        <!--Modal-->
+
+        <!-- Button trigger modal -->
+
+        
+        
+        <div id="errorModal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="text-center modal-title">You've Got An Error!!!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="error"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <!--input for zip-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---BREAK-->
+<div id=content>
+        <div class="row">
+            <div class="col-4">
+            </div>
+            <!--City Container-->
+            <div class="col-4 p-3 mb-2 bg-info text-white">
+                <h3><b>City</b></h3>
+                <h5 id="location"></h5>
+            </div>
+            <div class="col-4">
+            </div>
+        </div>
+        <!--Break-->
+        <div class="row">
+
+            <div class="col-4">
+            </div>
+
+            <!--Temperature Container-->
+            <div class="col-4 p-3 mb-2 bg-info text-white">
+                <h3 text:center><b>Temperature</b></h3>
+                <div class="row">
+                    <div class="col">
+                        <h5><b>Kelvin</b></h5>
+                        <h5 id="kelvin"></h5>
+                    </div>
+                    <div class="col">
+                        <h5><b>Fahrenheit</b></h5>
+                        <h5 id="fah"></h5>
+                    </div>
+                    <div class="col">
+                        <h5><b>Celcius</b></h5>
+                        <h5 id="celcius"></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Break-->
+        <!--Condition Container-->
+        <div class="row">
+            <div class="col-4">
+            </div>
+            <div class="col-4 p-3 mb-2 bg-info text-white">
+                <h3><b>Condition</b></h3>
+                <h5 id="condition"></h5>
+            </div>
+            <div class="col-4">
+            </div>
+        </div>
+        <!--Break-->
+        <!--Season Display Container-->
+        <div class="row">
+            <div class="col-4">
+            </div>
+            <div class="col-4 p-3 mb-2 bg-info text-white">
+                <h3><b>Season Display</b></h3>
+                <!--put card for icon here-->
+                <img src="#" id="sdisplay">
+            </div>
+            <div class="col-4"></div>
+        </div>
+
+        <!--Container-->
+    </div>
+</div>
+
+    <script src="./main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
